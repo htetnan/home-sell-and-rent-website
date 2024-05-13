@@ -13,7 +13,7 @@ export default function ForgotPassword() {
   async function onSubmit(e){
 e.preventDefault()
 try {
-  const auth =getAuth();
+  const auth = getAuth();
   await sendPasswordResetEmail(auth, email);
   toast.success("Email was sent");
 
