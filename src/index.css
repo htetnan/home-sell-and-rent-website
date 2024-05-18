@@ -16,9 +16,9 @@ body{
 }
 
 html::-webkit-scrollbar{
-    display: none;
+    display: inline;
 }
 
 html{
-    scrollbar-width: none;
+    scrollbar-width: inline;
 }
