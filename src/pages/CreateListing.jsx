@@ -184,9 +184,9 @@ export default function CreateListing() {
   }
   return (
    <main className="max-w-md px-2 mx-auto">
-    <h1 className="text-3xl text-center mt-6 font bold">Create a listing</h1>
+    <h1 className="text-3xl text-center mt-6 font bold">အရောင်း(သို့)အငှားပို့စ်ဖန်တီးမည်</h1>
     <form onSubmit={onSubmit}>
-<p className="text-lg mt-6 font-semibold">Sell / Rent</p>
+<p className="text-lg mt-6 font-semibold">ရောင်းမည်လား/ငှားမည်လား။</p>
 <div className="flex">
 <button
             type="button"
@@ -199,7 +199,7 @@ export default function CreateListing() {
                 : "bg-slate-600 text-white"
             }`}
           >
-            sell
+           ရောင်းမည်
           </button>
           <button
             type="button"
@@ -212,17 +212,17 @@ export default function CreateListing() {
                 : "bg-slate-600 text-white"
             }`}
           >
-            rent
+           ငှားမည်
           </button>
 </div>
   
-<p className="text-lg mt-6 font-semibold">Name</p>
+<p className="text-lg mt-6 font-semibold">အမည်</p>
         <input
           type="text"
           id="name"
           value={name}
           onChange={onChange}
-          placeholder="Name"
+          placeholder="အမည်"
           maxLength="32"
           minLength="10"
           required
@@ -230,7 +230,7 @@ export default function CreateListing() {
         />
         <div className="flex space-x-6 mb-6">
           <div>
-            <p className="text-lg font-semibold">Beds</p>
+            <p className="text-lg font-semibold">အိပ်ခန်း</p>
             <input
               type="number"
               id="bedrooms"
@@ -243,7 +243,7 @@ export default function CreateListing() {
             />
           </div>
           <div>
-            <p className="text-lg font-semibold">Baths</p>
+            <p className="text-lg font-semibold">ရေချိုးခန်း</p>
             <input
               type="number"
               id="bathrooms"
@@ -256,7 +256,7 @@ export default function CreateListing() {
             />
           </div>
         </div>
-        <p className="text-lg mt-6 font-semibold">Parking spot</p>
+        <p className="text-lg mt-6 font-semibold">ကားပါကင်</p>
         <div className="flex">
           <button
             type="button"
@@ -267,7 +267,7 @@ export default function CreateListing() {
               !parking ? "bg-white text-black" : "bg-slate-600 text-white"
             }`}
           >
-            Yes
+            ရှိသည်
           </button>
           <button
             type="button"
@@ -278,10 +278,10 @@ export default function CreateListing() {
               parking ? "bg-white text-black" : "bg-slate-600 text-white"
             }`}
           >
-            no
+           မရှိပါ
           </button>
         </div>
-        <p className="text-lg mt-6 font-semibold">Furnished</p>
+        <p className="text-lg mt-6 font-semibold">ပရိဘောဂများ</p>
         <div className="flex">
           <button
             type="button"
@@ -292,7 +292,7 @@ export default function CreateListing() {
               !furnished ? "bg-white text-black" : "bg-slate-600 text-white"
             }`}
           >
-            yes
+            ရှိသည်
           </button>
           <button
             type="button"
@@ -303,16 +303,16 @@ export default function CreateListing() {
               furnished ? "bg-white text-black" : "bg-slate-600 text-white"
             }`}
           >
-            no
+            မရှိပါ
           </button>
         </div>
-        <p className="text-lg mt-6 font-semibold">Address</p>
+        <p className="text-lg mt-6 font-semibold">အိမ်လိပ်စာ</p>
         <textarea
           type="text"
           id="address"
           value={address}
           onChange={onChange}
-          placeholder="Address"
+          placeholder="အိမ်လိပ်စာ"
           required
           className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-slate-600 mb-6"
         />
@@ -366,7 +366,7 @@ export default function CreateListing() {
           required
           className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-slate-600 mb-6"
         />
-        <p className="text-lg font-semibold">Offer</p>
+        <p className="text-lg font-semibold">အထူးလျှော့ဈေး</p>
         <div className="flex mb-6">
           <button
             type="button"
@@ -377,7 +377,7 @@ export default function CreateListing() {
               !offer ? "bg-white text-black" : "bg-slate-600 text-white"
             }`}
           >
-            yes
+          ပေးမည်
           </button>
           <button
             type="button"
@@ -388,13 +388,13 @@ export default function CreateListing() {
               offer ? "bg-white text-black" : "bg-slate-600 text-white"
             }`}
           >
-            no
+           မပေးပါ
           </button>
         </div>
 
         <div className="flex items-center mb-6">
           <div className="">
-            <p className="text-lg font-semibold">Regular price</p>
+            <p className="text-lg font-semibold">ပုံမှန်ဈေးနှုန်း</p>
             <div className="flex w-full justify-center items-center space-x-6">
               <input
                 type="number"
@@ -408,7 +408,7 @@ export default function CreateListing() {
               />
               {type === "rent" && (
                 <div className="">
-                  <p className="text-md w-full whitespace-nowrap">MMK / Month</p>
+                  <p className="text-md w-full whitespace-nowrap">ကျပ် / 1 Month</p>
                 </div>
               )}
             </div>
@@ -417,7 +417,7 @@ export default function CreateListing() {
         {offer && (
           <div className="flex items-center mb-6">
             <div className="">
-              <p className="text-lg font-semibold">Discounted price</p>
+              <p className="text-lg font-semibold">လျှော့ဈေး</p>
               <div className="flex w-full justify-center items-center space-x-6">
                 <input
                   type="number"
@@ -432,7 +432,7 @@ export default function CreateListing() {
                 {type === "rent" && (
                   <div className="">
                     <p className="text-md w-full whitespace-nowrap">
-                      MMK / Month
+                     ကျပ် / 1 Month
                     </p>
                   </div>
                 )}
@@ -443,7 +443,7 @@ export default function CreateListing() {
 
 
 <div className="mb-6">
-          <p className="text-lg font-semibold">Images</p>
+          <p className="text-lg font-semibold">သင်၏အိမ်ပုံစံများ</p>
           <p className="text-gray-600">
             The first image will be the cover (max 6)
           </p>
@@ -461,7 +461,7 @@ export default function CreateListing() {
           type="submit"
           className="mb-6 w-full px-7 py-3 bg-blue-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
         >
-          Create Listing
+          ပို့စ်တင်မည်
         </button>
 
     </form>

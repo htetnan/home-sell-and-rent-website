@@ -74,27 +74,27 @@ return <Spinner/>;
 
 {shareLinkCopied && (
         <p className="fixed top-[23%] right-[5%] font-semibold border-2 border-gray-400 rounded-md bg-white z-10 p-2">
-          Link Copied
+          လင့်ခ်ကိုကော်ပီကူးသည်။
         </p>
       )}
 
       <div className="m-4 flex flex-col md:flex-row max-w-6xl lg:mx-auto p-4 rounded-lg shadow-lg bg-white lg:space-x-5">
         <div className=" w-full">
           <p className="text-2xl font-bold mb-3 text-blue-900"> 
-            {listing.name } - MMK {listing.offer ? listing.discountedPrice.toString()
+            {listing.name } - {listing.offer ? listing.discountedPrice.toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",") 
                   : listing.regularPrice  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  {listing.type === "rent" ? "/ month" : ""}
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} ကျပ်
+                  {listing.type === "rent" ? "/ 1 month" : ""} 
           </p>
           <p className="flex items-center mt-6 mb-3 font-semibold">
             <FaMapMarkerAlt className="text-green-700 mr-1" />
             {listing.address}
           </p>
           <div className="flex justify-start items-center space-x-4 w-[75%]">
-<p className="bg-red-800 w-full max-w-[200px] rounded-md p-1 text-white text-center font-semibold shadow-md">{listing.type === "rent" ?  "Rent" : "Sale" }</p>
+<p className="bg-red-800 w-full max-w-[200px] rounded-md p-1 text-white text-center font-semibold shadow-md">{listing.type === "rent" ?  "ငှားမည်။" : "ရောင်းမည်။" }</p>
 {listing.offer &&(
-  <p className="w-full max-w-[200px] bg-green-800 rounded-md p-1 text-white text-center font-semibold shadow-md">MMK {+listing.regularPrice - +listing.discountedPrice} discount</p>
+  <p className="w-full max-w-[200px] bg-green-800 rounded-md p-1 text-white text-center font-semibold shadow-md"> {+listing.regularPrice - +listing.discountedPrice} ကျပ် လျှော့ဈေး</p>
 )}
           </div>
           <p className="mt-3 mb-3">Description -<span className="font-semibold">{listing.description}</span></p>
@@ -127,7 +127,7 @@ return <Spinner/>;
                 onClick={() => setContactLandlord(true)}
                 className="px-7 py-3 bg-blue-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg w-full text-center transition duration-150 ease-in-out "
               >
-                Contact Landlord
+                အိမ်ပိုင်ရှင်နှင့်ဆက်သွယ်ရန်
               </button>
             </div>
           )}
